@@ -1,0 +1,104 @@
+.total {
+    // display: inline-block;
+    margin: $space;
+    //margin: 0 0 $space * 2 0;
+    //margin: $space * 2 0 $space * 2 $space * 2;
+    padding: ($space * 3);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    //min-width: 250px;
+    //flex-grow: 1;
+    // height: 220px;
+     width: 420px;
+    // width: 30%;
+    // flex-grow: 1;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 ($space * 3) 0;
+        justify-content: center;
+        align-items: center;
+    }
+    //
+    //&__list {
+    //    margin: 0 0 0 $space;
+    //    border-radius: 30px;
+    //    padding: 0 $space;
+    //}
+
+    &__current {
+        //text-align: center;
+        font-weight: bold;
+        font-size: $fontSizeBase + 20;
+        color: $colorTitle;
+    }
+}
+
+.rate {
+    margin: $space * 2;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: $space;
+
+    //border: 1px solid red;
+    &__list {
+        padding: $space;
+    }
+
+    &__item {
+        padding: $space;
+        background-color: $colorBg;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+    }
+
+    &__info {
+        //width: 50%;
+        //border: 1px solid red;
+
+        &--name {
+            width: 20%;
+            margin: 0 0 0 $space;
+        }
+
+        &--count {
+            flex-grow: 1;
+            display: flex;
+            background-color: #bfbab6aa;
+        }
+
+        &--avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__bar-wrapper {
+        width: 100%;
+        background-color: #bfbab6aa;
+    }
+
+    &__bar-bar {
+        height: 100%;
+        //width: 100px;
+        background-color: $colorBtn;
+        border-radius: 0 $space $space 0;
+
+        span {
+            float: right;
+            margin: 0 $space / 2 0 0;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import "_var.scss";
+@media screen and (max-width: 1140px){
+  .users {
+    &__modal-close {
+      right: 4%;
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .users {
+    &__item {
+      padding: $space;
+    }
+
+    &__modal-close {
+      right: $space / 3;
+    }
+
+    &__contact {
+      max-width: 100px;
+    }
+
+    &__profile {
+      max-width: 150px;
+    }
+
+    &__bar {
+      max-width: 150px;
+      display: flex;
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px){
+  .total {
+    padding: $space;
+
+    &__wrapper {
+      margin: 0 0 $space 0;
+    }
+  }
+
+  .rate {
+    &__info--name {
+      margin: 0 $space / 3;
+    }
+  }
+
+  .users {
+    &__contact {
+      //width: 100px;
+      padding: 0 0 0 $space / 2;
+    }
+  }
+
+  .tasks {
+    &__search {
+      width: 100px;
+      margin: 0 $space/3;
+    }
+
+    &__modal-close {
+
+    }
+  }
+}

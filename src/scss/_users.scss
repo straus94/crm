@@ -1,0 +1,354 @@
+.users {
+  padding: $space;
+  //position: relative;
+  border: 1px solid #d4d9e3;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    //border-bottom: 1px solid #ccc;
+    padding: $space;
+    margin: 0 0 $space 0;
+  }
+
+  &__search {
+    //height: 30px;
+    width: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: $space / 2;
+    margin: 0 0 0 $space*2;
+  }
+
+  &__list {
+    border: 1px solid #d4d9e3;
+    background-color: #ffffff;
+
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d4d9e3;
+    padding: $space + 9;
+    position: relative;
+
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover .users__hover {
+      transition-duration: 0.4s;
+
+      display: block;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    width: 200px;
+  }
+
+  &__avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    //background-image: url("../assets/avatar.jpg");
+    //background-size: cover;
+    //background-position: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__profile-wrapper {
+    margin: 0 0 0 $space / 2;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $colorBase;
+  }
+
+  &__position {
+    color: $colorTitle;
+  }
+
+  &__bar {
+    width: 200px;
+    display: flex;
+  }
+
+  &__bar-fail {
+    text-align: center;
+    width: 50%;
+    height: 20px;
+    background-color: $colorFail;
+    border-radius: 0 20px 20px 0;
+    line-height: 20px;
+  }
+
+  &__bar-good {
+    text-align: center;
+    width: 50%;
+    height: 20px;
+    background-color: $colorBtn;
+
+    border-radius: 20px 0 0 20px;
+    line-height: 20px;
+  }
+
+  &__contact {
+    width: 150px;
+  }
+
+  &__hover {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.855);
+    z-index: 100;
+    transition-duration: 0.3s;
+  }
+
+  &__hover-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.3s;
+  }
+
+  &__send {
+    margin: 0 $space * 2;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__open-modal {
+    margin: 0 $space * 2;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__icon {
+    font-size: $fontSizeBase + 20;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  &__modal-user {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.855);
+    padding: $space * 3 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    z-index: 500;
+  }
+
+  &__modal-wrapper {
+    background-color: #f6f7fa;
+    padding: $space;
+    position: relative;
+    height: 400px;
+    min-width: 300px;
+    //overflow-y: auto;
+    overflow-x: hidden;
+    //position: absolute;
+    top: $space * 3;
+    box-shadow: -1px -1px 29px -10px rgba(85,132,255,1);
+    //left: 50%;
+    //transform: translateX(-50%);
+    //z-index: 900;
+  }
+  &__modal-close {
+    position: fixed;
+    z-index: 100111;
+    top: $space * 3;
+    //right: $space * 19;
+    right: 10%;
+    background-color: #f83c7bdd;
+    padding: $space;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: #f83c7b;
+      transform: scale(1.2);
+    }
+  }
+
+  &__modal-block-info {
+    display: flex;
+  }
+
+  &__modal-avatar {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__modal-profile {
+    margin: 0 0 0 $space;
+    align-self: center;
+  }
+
+  &__modal-block-tasks {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__modal-tasks {
+    //width: 33%;
+    min-width: 250px;
+    flex-grow: 1;
+  }
+
+  &__modal-list-item {
+    display: flex;
+    align-items: center;
+    padding: $space;
+    position: relative;
+    border: 1px solid #cccccc;
+    margin: $space / 2;
+    position: relative;
+    transition-duration: 0.3s;
+
+    &:hover {
+      .users__item-profile-task-hover {
+        display: flex;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+
+  &__modal-item-point {
+    width: 40px;
+    height: 40px;
+    background-color: $colorBtn;
+    border-radius: 50%;
+
+    &--inprogress {
+      background-color: $colorTitle;
+    }
+    &--todo {
+      background-color: $colorFail;
+    }
+    &--completed {
+      background-color: $colorBtn;
+    }
+  }
+
+  &__modal-item-preview {
+    overflow-x: hidden;
+    margin: 0 0 0 $space / 2;
+  }
+
+  &__modal-item-deadline {
+    position: absolute;
+    left: 60%;
+    bottom: $space / 2;
+    color: $colorTitle;
+    font-size: $fontSizeBase - 2;
+  }
+
+  &__add-task {
+    z-index: 100;
+    cursor: pointer;
+    position: fixed;
+    bottom: $space * 3;
+    right: $space * 3;
+    background-color: #5384ffbb;
+    padding: $space;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: #5384ff;
+      transform: scale(1.2);
+    }
+  }
+
+  &__add-task-btn {
+    color: #ffffff;
+    font-size: $fontSizeBase + 14;
+  }
+
+  &__item-profile-task-hover {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.855);
+    z-index: 100;
+    transition-duration: 0.3s;
+  }
+
+  &__item-profile-task-hover-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition-duration: 0.3s;
+  }
+
+  &__item-profile-task-icon {
+    font-size: $fontSizeBase + 5;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--edit {
+      color: $colorBtn;
+    }
+
+    &--right {
+      color: green;
+    }
+
+    &--delete {
+      color:  #f83c7b;
+    }
+
+    &--more {
+      color: #ffffff;
+    }
+  }
+}
